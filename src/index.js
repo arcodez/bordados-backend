@@ -1,4 +1,7 @@
 const app = require('./app');
 
- // set routes from routes file
- app.use(require('./routes/index.routes'));
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`listening on port ${port} from app`)
+});
